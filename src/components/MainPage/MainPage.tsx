@@ -76,7 +76,8 @@ class MainPage extends Component {
         data.append('gridId', Math.random().toString());
         defaultApiService.post('UploadData', data)
             .then(res => {
-                $('#userModal').modal('hide');
+                // @ts-ignore
+                document.getElementById('modalCloseButton').click();
             })
     };
 
