@@ -30,7 +30,7 @@ class CommonModal extends Component<ICompProps> {
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-dismiss="modal">Cancel</button>
                             <button type="button" className="btn btn-primary"
-                                    onClick={() => this.props.submitUser({name: 'test'})}>Upload
+                                    onClick={this.props.submitUser}>Upload
                             </button>
                         </div>
                     </div>

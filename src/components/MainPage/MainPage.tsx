@@ -6,13 +6,18 @@ import * as defaultApiService from '../../common/defaultApiService'
 
 declare var $: any;
 
+interface IUser {
+    "thumbnailImageUrl": string,
+    "originalImageUrl": string,
+    "gridId": string,
+    "name": string,
+    "thanksTo": string,
+    "hashTags": string
+}
+
 class MainPage extends Component {
     imageCount: number = 1000;
     imageModal: any;
-
-    image = {
-        userImageUrl: localImage
-    };
     state = {
         isOpen: false,
         users: [],
@@ -23,6 +28,17 @@ class MainPage extends Component {
             "name": null,
             "thanksTo": "",
             "hashTags": ""
+        },
+        file: null,
+        newUser: {
+            "thumbnailImageUrl": localImage,
+            "originalImageUrl": "",
+            "gridId": '',
+            "name": '',
+            "thanksTo": "",
+            "hashTags": "",
+            "email": '',
+            "file": ''
         }
     };
     openModal = (user: any) => {
@@ -50,19 +66,42 @@ class MainPage extends Component {
             })
     }
 
-    submitUser = (user: any) => {
-        defaultApiService.post('UploadData', user)
+    submitUser = () => {
+        let data = new FormData();
+        data.append('file', this.state.newUser.file);
+        data.append('name', this.state.newUser.name);
+        data.append('email', this.state.newUser.email);
+        data.append('thanksTo', this.state.newUser.thanksTo);
+        data.append('hashTags', this.state.newUser.hashTags);
+        data.append('gridId', Math.random().toString());
+        defaultApiService.post('UploadData', data)
             .then(res => {
                 $('#userModal').modal('hide');
             })
+    };
+
+    setNewUserModal = (newUser: any) => {
+        this.setState({
+            newUser: {
+                ...this.state.newUser,
+                name: newUser.name,
+                email: newUser.email,
+                thanksTo: newUser.thanksTo,
+                hashTags: newUser.hashTags,
+                file: newUser.file
+            }
+        })
     };
 
     render() {
         return (
             <>
                 <CommonModal isOpen={this.state.isOpen}
-                             modalBody={<UserModalBody currentUser={this.state.currentUser}
-                                                       readOnly={this.state.currentUser.gridId ? true : false}/>}
+                             modalBody={<UserModalBody
+                                 currentUser={this.state.currentUser}
+                                 readOnly={this.state.currentUser.gridId ? true : false}
+                                 setNewUserModal={this.setNewUserModal}
+                             />}
                              submitUser={this.submitUser}/>
 
                 {this.state.users.length >= 1 && <div className='board' style={{"textAlign": "center"}}>
