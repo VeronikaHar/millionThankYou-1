@@ -37,9 +37,9 @@ class UserModalBody extends Component<ICompProps> {
         console.log(event.target.files[0]);
         const file = event.target.files[0];
         this.setState({fileLabel: file.name});
-        this.setState({file:file},()=>{
+        this.setState({userData: {...this.state.userData, file: file}}, () => {
             this.props.setNewUserModal(this.state.userData);
-        })
+        });
     };
 
     render() {
@@ -50,7 +50,7 @@ class UserModalBody extends Component<ICompProps> {
                     <input type="text" className="form-control" id="txtName" value={this.state.userData.name || ''}
                            readOnly={this.props.readOnly}
                            onChange={(event) => {
-                               this.setState({userData: {...this.state.userData, name: event.target.value}}, ()=>{
+                               this.setState({userData: {...this.state.userData, name: event.target.value}}, () => {
                                    this.props.setNewUserModal(this.state.userData)
                                })
                            }}/>
@@ -60,7 +60,7 @@ class UserModalBody extends Component<ICompProps> {
                     <input type="email" className="form-control" id="txtEmail"
                            value={this.state.userData.email || ''} readOnly={this.props.readOnly}
                            onChange={(event) => {
-                               this.setState({userData: {...this.state.userData, email: event.target.value}}, ()=>{
+                               this.setState({userData: {...this.state.userData, email: event.target.value}}, () => {
                                    this.props.setNewUserModal(this.state.userData)
                                })
                            }}/>
@@ -70,7 +70,7 @@ class UserModalBody extends Component<ICompProps> {
                     <input type="text" className="form-control" id="txtSpecial"
                            value={this.state.userData.thanksTo || ''} readOnly={this.props.readOnly}
                            onChange={(event) => {
-                               this.setState({userData: {...this.state.userData, thanksTo: event.target.value}}, ()=>{
+                               this.setState({userData: {...this.state.userData, thanksTo: event.target.value}}, () => {
                                    this.props.setNewUserModal(this.state.userData)
                                })
                            }}/>
@@ -80,7 +80,7 @@ class UserModalBody extends Component<ICompProps> {
                     <input type="text" className="form-control" id="txtHashtags"
                            value={this.state.userData.hashTags || ''} readOnly={this.props.readOnly}
                            onChange={(event) => {
-                               this.setState({userData: {...this.state.userData, hashTags: event.target.value}}, ()=>{
+                               this.setState({userData: {...this.state.userData, hashTags: event.target.value}}, () => {
                                    this.props.setNewUserModal(this.state.userData)
                                })
                            }}/>
