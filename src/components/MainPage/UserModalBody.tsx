@@ -28,7 +28,7 @@ class UserModalBody extends Component<ICompProps> {
     };
 
     componentDidUpdate(prevProps: any, prevState: any, snapshot: any) {
-        if (this.props.currentUser && this.props.currentUser.gridId !== prevProps.currentUser.gridId) {
+        if (this.props.currentUser && this.props.currentUser.id !== prevProps.currentUser.id) {
             this.setState({ userData: this.props.currentUser })
         }
     }

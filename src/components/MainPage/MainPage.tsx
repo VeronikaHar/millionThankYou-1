@@ -26,6 +26,7 @@ class MainPage extends Component {
             "thumbnailImageUrl": localImage,
             "originalImageUrl": "",
             "gridId": null,
+            'id': null,
             "name": null,
             "thanksTo": "",
             "hashTags": ""
@@ -102,7 +103,7 @@ class MainPage extends Component {
                     <CommonModal isOpen={this.state.isOpen}
                         modalBody={<UserModalBody
                             currentUser={this.state.currentUser}
-                            readOnly={this.state.currentUser.gridId ? true : false}
+                            readOnly={this.state.currentUser.id ? true : false}
                             setNewUserModal={this.setNewUserModal}
                         />}
                         submitUser={this.submitUser} />
@@ -114,7 +115,7 @@ class MainPage extends Component {
                 {this.state.users.length >= 1 && <div className='board'>
                     {this.state.users.map((e: any, i) => {
                         return <div className='tile' key={i}>
-                            <img className={e.gridId ? 'plusImage' : 'plus'} src={e.thumbnailImageUrl}
+                            <img className={e.id ? 'plusImage' : 'plus'} src={e.thumbnailImageUrl}
                                 onClick={() => { this.openModal(e); console.log(e) }} />
                         </div>
                     }
