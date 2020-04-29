@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import localImage from '../../assets/1.jpg';
 import CommonModal from '../../common/commonModal'
 import UserModalBody from "./UserModalBody";
@@ -42,7 +42,7 @@ class MainPage extends Component {
         }
     };
     openModal = (user: any) => {
-        this.setState({currentUser: user}, () => {
+        this.setState({ currentUser: user }, () => {
             this.imageModal.click();
         });
     };
@@ -62,7 +62,7 @@ class MainPage extends Component {
                         "hashTags": ""
                     })
                 }
-                this.setState({users: tempUsers});
+                this.setState({ users: tempUsers });
             })
     }
 
@@ -98,20 +98,20 @@ class MainPage extends Component {
         return (
             <>
                 <CommonModal isOpen={this.state.isOpen}
-                             modalBody={<UserModalBody
-                                 currentUser={this.state.currentUser}
-                                 readOnly={this.state.currentUser.gridId ? true : false}
-                                 setNewUserModal={this.setNewUserModal}
-                             />}
-                             submitUser={this.submitUser}/>
+                    modalBody={<UserModalBody
+                        currentUser={this.state.currentUser}
+                        readOnly={this.state.currentUser.gridId ? true : false}
+                        setNewUserModal={this.setNewUserModal}
+                    />}
+                    submitUser={this.submitUser} />
 
-                {this.state.users.length >= 1 && <div className='board' style={{"textAlign": "center"}}>
+                {this.state.users.length >= 1 && <div className='board'>
                     {this.state.users.map((e: any, i) => {
-                            return <div className='tile' key={i} style={{"opacity": e.gridId ? '1' : 0.6}}>
-                                <img className={e.gridId ? 'plusImage' : 'plus'} src={e.thumbnailImageUrl}
-                                     onClick={() => this.openModal(e)}/>
-                            </div>
-                        }
+                        return <div className='tile' key={i}>
+                            <img className={e.gridId ? 'plusImage' : 'plus'} src={e.thumbnailImageUrl}
+                                onClick={() => this.openModal(e)} />
+                        </div>
+                    }
                     )}
                 </div>}
 
@@ -119,7 +119,7 @@ class MainPage extends Component {
                 <button ref={(f) => {
                     this.imageModal = f;
                 }} type="button" className="btn btn-primary d-none" data-toggle="modal"
-                        data-target="#exampleModalCenter">
+                    data-target="#exampleModalCenter">
                     Launch demo modal
                 </button>
             </>

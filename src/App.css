@@ -5,13 +5,13 @@
   --tile-color-darker: #cecece;
   --gray: #909597;
   --heading-font: 'Muli', sans-serif;
-  --heading-font-color: #e71212;
-  --gap: 10px;
+  --heading-font-color: #ff2f2f;
+  --heading-font-color-darker: #e71212;
   --font-weight: 500;
   --font-size-basic: 20px;
   --font-size-h: 28px;
   --font-color: #113448;
-  --radius: 3px;
+  --radius: 0.2rem;
   --shadow: 3px 4px 7px 0 #B6B6B6;
 }
 
@@ -38,6 +38,50 @@ body {
   margin: auto;
   padding: 20px 10px;
   justify-content: center
+}
+
+.btn {
+  border: 0;
+  border-radius: var(--radius);
+  background: #14bf98;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: 18px;
+  padding: 9px 15px;
+  align-self: flex-end;
+  float: right;
+}
+
+.btn-secondary {
+  background: var(--gray);
+}
+
+.btn:hover,
+.btn:focus {
+  cursor: pointer;
+  background-color: var(--heading-font-color);
+  box-shadow: var(--shadow);
+}
+
+.btn:active {
+  background-color: var(--heading-font-color-darker)!important;
+  box-shadow: none;
+  outline: none!important;
+}
+
+.form-control,
+.custom-file-label {
+  border-radius: var(--radius);
+}
+
+.modal-dialog {
+  max-width: 700px;
+}
+
+.modal-body {
+  padding: 20px;
 }
 
 .tile {
@@ -72,4 +116,15 @@ body {
 .plusImage {
   height: 38px;
   width: 38px;
+}
+
+@media all and (max-width: 757px) {
+  body {
+    font-size: 16px;
+  }
+
+  .modal-header,
+  .modal-body {
+    padding: 15px 10px;
+  }
 }
