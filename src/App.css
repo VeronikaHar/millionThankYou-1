@@ -74,6 +74,11 @@ body {
 .form-control,
 .custom-file-label {
   border-radius: var(--radius);
+  text-align: left;
+}
+
+label {
+  float:  left;
 }
 
 .modal-dialog {
@@ -81,7 +86,15 @@ body {
 }
 
 .modal-body {
-  padding: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+.modal-body img {
+  max-width: 100%;
+  max-height: 550px;
+  min-width: 210px;
+  min-height: 210px;
 }
 
 .tile {
@@ -126,5 +139,9 @@ body {
   .modal-header,
   .modal-body {
     padding: 15px 10px;
+  }
+
+  .modal-body img {
+    max-height: 400px;
   }
 }
