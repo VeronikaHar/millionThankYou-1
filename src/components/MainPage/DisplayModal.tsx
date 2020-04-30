@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 
 interface ICompProps {
     isOpen: boolean
-    imageUrl: string
-    thxTo: string
+    user: any
 }
 
 class DisplayModal extends Component<ICompProps> {
@@ -18,13 +17,14 @@ class DisplayModal extends Component<ICompProps> {
             <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title">Thank You! {this.props.thxTo} </h5>
+                        <h5 className="modal-title">Thank You! {this.props.user.thanksTo} </h5>
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close" id='modalCloseButton'>
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div className="modal-body">
-                        <img src={this.props.imageUrl} />
+                        <img src={this.props.user.originalImageUrl} />
+                        <p>{this.props.user.hashTags}</p>
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-primary" data-dismiss="modal">Close</button>

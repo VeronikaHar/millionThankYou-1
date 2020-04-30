@@ -97,6 +97,10 @@ label {
   min-height: 210px;
 }
 
+p {
+  margin: 10px 0;
+}
+
 .tile {
   height: 40px;
   width: 40px;
