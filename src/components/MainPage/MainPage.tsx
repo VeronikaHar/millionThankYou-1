@@ -109,8 +109,7 @@ class MainPage extends Component {
                         submitUser={this.submitUser} />
                     : <DisplayModal
                         isOpen={this.state.isOpen}
-                        imageUrl={this.state.currentUser.originalImageUrl}
-                        thxTo={this.state.currentUser.thanksTo} />}
+                        user={this.state.currentUser} />}
 
                 {this.state.users.length >= 1 && <div className='board'>
                     {this.state.users.map((e: any, i) => {
