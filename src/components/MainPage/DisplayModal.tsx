@@ -27,7 +27,7 @@ class DisplayModal extends Component<ICompProps> {
                         <img src={this.props.imageUrl} />
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn btn-primary" data-dismiss="modal">Cancel</button>
+                        <button type="button" className="btn btn-primary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
