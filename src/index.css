@@ -11,6 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h3 {
+	color: #484a46;
+	font: 700 1.375rem/1.75rem "Montserrat", sans-serif;
+}
+
+body, p {
+	color: #4c4c4b; 
+	font: 400 1rem/1.5625rem "Open Sans", sans-serif;
+}
+
 /**************************/
 /*     03. Navigation     */
 /**************************/
@@ -182,7 +193,7 @@ a:hover.back-to-top {
 /*     17. Footer     */
 /**********************/
 .footer {
-  padding-top: 5rem;
+  /* padding-top: 5rem; */
   background-color: #113448;
 }
 

@@ -7,8 +7,7 @@ class AppFooter extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <p className="p-small">Copyright © 2020 <a href="https://inovatik.com">Million Thank You
-                                Organization</a>
+                            <p className="p-small">Copyright © 2020 Million Thank You Organization
                                 <span className="nav-item social-icons ml-auto">
                       <span className="fa-stack">
                           <a href="#your-link">

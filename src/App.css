@@ -28,7 +28,7 @@ body {
   font-weight: 300;
   font-size: var(--font-size-basic);
   color: var(--font-color);
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: auto;
 }
 
@@ -36,7 +36,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  padding: 20px 10px;
+  padding: 80px 10px;
   justify-content: center
 }
 
@@ -133,6 +133,10 @@ p {
 .plusImage {
   height: 38px;
   width: 38px;
+}
+
+.ex-basic-2 {
+  padding-top: 80px;
 }
 
 @media all and (max-width: 757px) {
