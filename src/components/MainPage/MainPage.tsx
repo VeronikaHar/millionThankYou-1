@@ -73,6 +73,7 @@ class MainPage extends Component {
             .then(res => {
                 // @ts-ignore
                 document.getElementById('modalCloseButton').click();
+                this.setState({currentUser: {}})
             })
     };
 
@@ -91,7 +92,7 @@ class MainPage extends Component {
 
     render() {
         if (this.state.loading)
-            return (<h1 className='text-center min-vh-100' style={{marginTop:'10%'}}>Loading please wait...</h1>)
+            return (<h1 className='text-center min-vh-100' style={{marginTop: '10%'}}>Loading please wait...</h1>)
         return (
             <>
                 {this.state.currentUser.originalImageUrl === '' ?
