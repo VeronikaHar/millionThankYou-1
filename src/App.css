@@ -4,13 +4,12 @@
   --tile-color-lighter: #efeeee;
   --tile-color-darker: #cecece;
   --gray: #909597;
-  --heading-font: 'Muli', sans-serif;
+  --heading-font: "Montserrat", sans-serif;
   --heading-font-color: #ff2f2f;
   --heading-font-color-darker: #e71212;
-  --font-weight: 500;
-  --font-size-basic: 20px;
+  --font-size-basic: 18px;
   --font-size-h: 28px;
-  --font-color: #113448;
+  --font-color: #4c4c4b;
   --radius: 0.2rem;
   --shadow: 3px 4px 7px 0 #B6B6B6;
 }
@@ -20,7 +19,9 @@
 *:before,
 *:after {
   box-sizing: border-box;
-  font-family:  'Lucida Sans Unicode', arial;
+  font-family:  'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: var(--font-size-basic);
 }
 
 a{
@@ -34,10 +35,9 @@ a:hover {
 
 body {
   background-color: #fff;
-  font-weight: 300;
-  font-size: var(--font-size-basic);
   color: var(--font-color);
   margin: auto;
+  line-height: 1.5;
 }
 
 .board {
@@ -78,9 +78,23 @@ body {
   outline: none!important;
 }
 
+.close span {
+  font-size: 30px;
+}
+
+.close span:hover{
+  color: var(--heading-font-color-darker);
+}
+
 .form-control,
 .custom-file-label {
   border-radius: var(--radius);
+  text-align: left;
+}
+
+h3 {
+	color: #484a46;
+  font: 700 30px "Montserrat", sans-serif;
   text-align: left;
 }
 
@@ -108,6 +122,20 @@ label {
   max-height: 550px;
   min-width: 210px;
   min-height: 210px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  padding: 0;
+  padding-right: 20px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:active {
+  color: #14bf98;
 }
 
 p {

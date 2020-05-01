@@ -1,27 +1,3 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-h3 {
-	color: #484a46;
-  font: 700 1.375rem/1.75rem "Montserrat", sans-serif;
-  text-align: left;
-}
-
-body, p {
-	color: #4c4c4b; 
-	font: 400 1rem/1.5625rem "Open Sans", sans-serif;
-}
 
 /* Hover Animation */
 .image-container {
@@ -74,18 +50,6 @@ body, p {
 .navbar-custom .navbar-nav {
   margin-top: 0.75rem;
   margin-bottom: 0.5rem;
-}
-
-.navbar-custom .nav-item .nav-link {
-  padding: 0.625rem 0.75rem 0.625rem 0.75rem;
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.navbar-custom .nav-item .nav-link:hover,
-.navbar-custom .nav-item .nav-link.active {
-  color: #14bf98;
 }
 
 /* Dropdown Menu */
