@@ -12,12 +12,12 @@ class AboutUs extends Component {
                                 <h3>Our Mission</h3>
                                 <p>Together provide appreciation to frontline workers</p>
                             </div>
-
+                            <br />
                             <div className="text-container">
                                 <h3>About us</h3>
                                 <p>Hi there! We are bunch of individual people who just want to help bring some normalcy in this chaotic situation. We cannot do what our frontline workers are doing, they are the real hero and this is our way of saying “thank you” to them. There has been many international crisis in the past and it has created many heroes who helped save the world but as world moves on, we tend to forget them but not this time. We will collect 1,000,000 images and keep this page running as long as we can to show that we will never forget how our frontline worker stood and save the world during COVID-19 pandemic.</p>
                             </div>
-
+                            <br />
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="text-container">
@@ -25,7 +25,7 @@ class AboutUs extends Component {
                                         <p>Be part of our mission to collect 1 million thank you pictures. We strongly believe that everyone want to be contribute what they can to bring happiness in this world and this is your chance to make the different in the community and bring smile to all the frontline workers around the world. Simply take a picture of you or your family holding sign saying “thank you”.</p>
                                         <p><b>Phase 1:</b> We are releasing 10,000 spots to upload your image and as we fill out the spot we will be keep opening more until we fill up 1,000,000.</p>
                                     </div>
-
+                                    <br />
                                     <div className="text-container">
                                         <h3>Contact us</h3>
                                         <p>You can reach us at millionthankyouorg@gmail.com</p>
