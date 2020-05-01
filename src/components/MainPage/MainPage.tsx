@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import localImage from '../../assets/1.jpg';
 import CommonModal from '../../common/commonModal';
 import DisplayModal from "./DisplayModal";
@@ -36,7 +36,7 @@ class MainPage extends Component {
         }
     };
     openModal = (user: any) => {
-        this.setState({currentUser: user}, () => {
+        this.setState({ currentUser: user }, () => {
             this.imageModal.click();
         });
     };
@@ -44,7 +44,7 @@ class MainPage extends Component {
     componentDidMount() {
         defaultApiService.get('GetAll')
             .then(res => {
-                this.setState({loading: false})
+                this.setState({ loading: false })
                 this.imageCount = res.data && res.data.length >= 1 && res.data.length < this.imageCount ? this.imageCount - res.data.length : this.imageCount;
                 const tempUsers = res.data;
                 for (let i = res.data.length | 0; i < 1000; i++) {
@@ -57,7 +57,7 @@ class MainPage extends Component {
                         "hashTags": ""
                     })
                 }
-                this.setState({users: tempUsers});
+                this.setState({ users: tempUsers });
             })
     }
 
@@ -73,7 +73,7 @@ class MainPage extends Component {
             .then(res => {
                 // @ts-ignore
                 document.getElementById('modalCloseButton').click();
-                this.setState({currentUser: {}})
+                this.setState({ currentUser: {} })
             })
     };
 
@@ -92,30 +92,30 @@ class MainPage extends Component {
 
     render() {
         if (this.state.loading)
-            return (<h1 className='text-center min-vh-100' style={{marginTop: '10%'}}>Loading please wait...</h1>)
+            return (<h3 className='text-center min-vh-100' style={{ marginTop: '50vh', fontWeight: 500, color: '#e71212' }}>Loading please wait...</h3>)
         return (
             <>
                 {this.state.currentUser.originalImageUrl === '' ?
                     <CommonModal isOpen={this.state.isOpen}
-                                 modalBody={<UserModalBody
-                                     currentUser={this.state.currentUser}
-                                     readOnly={this.state.currentUser.id ? true : false}
-                                     setNewUserModal={this.setNewUserModal}/>}
-                                 submitUser={this.submitUser}/>
+                        modalBody={<UserModalBody
+                            currentUser={this.state.currentUser}
+                            readOnly={this.state.currentUser.id ? true : false}
+                            setNewUserModal={this.setNewUserModal} />}
+                        submitUser={this.submitUser} />
                     : <DisplayModal
                         isOpen={this.state.isOpen}
-                        user={this.state.currentUser}/>}
+                        user={this.state.currentUser} />}
 
                 {this.state.users.length >= 1 && <div className='board'>
                     {this.state.users.map((e: any, i) => {
-                            return <div className='tile' key={i}>
-                                <img className={e.id ? 'plusImage' : 'plus'} src={e.thumbnailImageUrl}
-                                     onClick={() => {
-                                         this.openModal(e);
-                                         console.log(e)
-                                     }}/>
-                            </div>
-                        }
+                        return <div className='tile' key={i}>
+                            <img className={e.id ? 'plusImage' : 'plus'} src={e.thumbnailImageUrl}
+                                onClick={() => {
+                                    this.openModal(e);
+                                    console.log(e)
+                                }} />
+                        </div>
+                    }
                     )}
                 </div>}
 
@@ -123,7 +123,7 @@ class MainPage extends Component {
                 <button ref={(f) => {
                     this.imageModal = f;
                 }} type="button" className="btn btn-primary d-none" data-toggle="modal"
-                        data-target="#exampleModalCenter">
+                    data-target="#exampleModalCenter">
                     Launch demo modal
                 </button>
             </>
