@@ -14,15 +14,15 @@ function App() {
                 <AppHeader/>
             </header>
             <div>
-            <Router>
-                <div className="mx-3">
-                    <Route exact path="/" component={MainPage}/>
-                    <Route exact path="/aboutUs" component={AboutUs}/>
-                </div>
-            </Router>
+                <Router>
+                    <div className="mx-3">
+                        <Route exact path="/" component={MainPage}/>
+                        <Route exact path="/aboutUs" component={AboutUs}/>
+                    </div>
+                </Router>
             </div>
             <div className={'footer'}>
-                <AppFooter />
+                <AppFooter/>
             </div>
         </div>
     );
