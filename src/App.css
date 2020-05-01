@@ -23,6 +23,15 @@
   font-family:  'Lucida Sans Unicode', arial;
 }
 
+a{
+  color:  var(--font-color);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--heading-font-color);
+}
+
 body {
   background-color: #fff;
   font-weight: 300;
@@ -73,6 +82,12 @@ body {
 .custom-file-label {
   border-radius: var(--radius);
   text-align: left;
+}
+
+iframe {
+  width: 290px!important;
+  min-width: 200px!important;
+  height: 500px;
 }
 
 label {

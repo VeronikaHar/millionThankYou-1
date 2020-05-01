@@ -10,7 +10,7 @@ class AboutUs extends Component {
                         <div className="col-lg-12">
                             <div className="text-container">
                                 <h3>Our Mission</h3>
-                                <p>Together provide appreciation to frontline workers</p>
+                                <p>Together provide appreciation to frontline workers.</p>
                             </div>
                             <br />
                             <div className="text-container">
@@ -26,13 +26,13 @@ class AboutUs extends Component {
                                         <p><b>Phase 1:</b> We are releasing 10,000 spots to upload your image and as we fill out the spot we will be keep opening more until we fill up 1,000,000.</p>
                                     </div>
                                     <br />
-                                    <div className="text-container">
+                                    <div className="text-container" style={{ marginBottom: '40px', textAlign: 'left' }}>
                                         <h3>Contact us</h3>
-                                        <p>You can reach us at millionthankyouorg@gmail.com</p>
+                                        <p>You can reach us at <a href="mailto:millionthankyouorg@gmail.com">millionthankyouorg@gmail.com</a></p>
                                     </div>
                                 </div>
                                 <div className="col-md-6">
-                                    <div className="text-container" style={{ maxHeight: '500px', overflow: 'hidden' }}>
+                                    <div className="text-container" style={{ maxHeight: '600px', overflow: 'hidden' }}>
                                         <h3>Message from Michelle Obama</h3>
                                         <InstagramEmbed
                                             url='https://www.instagram.com/p/B-dHjFkgdL9/?utm_source=ig_web_copy_link'
@@ -53,7 +53,7 @@ class AboutUs extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         );
     }
 }
