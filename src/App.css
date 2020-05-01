@@ -28,15 +28,13 @@ body {
   font-weight: 300;
   font-size: var(--font-size-basic);
   color: var(--font-color);
-  /* max-width: 1000px; */
   margin: auto;
 }
 
 .board {
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
-  padding: 80px 10px;
+  margin: 80px 7% 50px;
   justify-content: center
 }
 
@@ -104,7 +102,8 @@ p {
 .tile {
   height: 40px;
   width: 40px;
-  border: 1px solid var(--tile-color-darker);
+  border: 1px solid white;
+  border-radius: var(--radius);
   background-color: var(--tile-color-lighter);
   opacity: 0.7;
   display: flex;
@@ -119,8 +118,8 @@ p {
 }
 
 .plus {
-  height: 36px;
-  width: 36px;
+  height: 33px;
+  width: 33px;
   padding: 6px;
 }
 
@@ -133,15 +132,22 @@ p {
 .plusImage {
   height: 38px;
   width: 38px;
+  border-radius: var(--radius);
 }
 
 .ex-basic-2 {
-  padding-top: 80px;
+  margin: 90px 7% 50px;
+  text-align: justify;
 }
 
 @media all and (max-width: 757px) {
   body {
     font-size: 16px;
+  }
+
+  .board,
+  .ex-basic-2 {
+    margin: 80px auto 50px;
   }
 
   .modal-header,
