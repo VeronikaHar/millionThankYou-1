@@ -152,6 +152,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .tile:hover,
@@ -176,6 +177,13 @@ p {
   height: 38px;
   width: 38px;
   border-radius: var(--radius);
+  transition: all 0.5s;
+}
+
+.plusImage:hover,
+.plusImage:focus,
+.plusImage:active {
+  transform: scale(1.3);
 }
 
 .ex-basic-2 {
