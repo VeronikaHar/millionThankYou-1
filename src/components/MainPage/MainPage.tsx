@@ -99,8 +99,7 @@ class MainPage extends Component {
                                  modalBody={<UserModalBody
                                      currentUser={this.state.currentUser}
                                      readOnly={this.state.currentUser.id ? true : false}
-                                     setNewUserModal={this.setNewUserModal}
-                                 />}
+                                     setNewUserModal={this.setNewUserModal}/>}
                                  submitUser={this.submitUser}/>
                     : <DisplayModal
                         isOpen={this.state.isOpen}
