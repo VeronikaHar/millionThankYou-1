@@ -1,21 +1,3 @@
-
-/* Hover Animation */
-.image-container {
-	overflow: hidden;
-	border-radius: 0.25rem;
-}
-
-.image-container img {
-	margin: 0;
-	border-radius: 0.25rem;
-	transition: all 0.3s;
-}
-
-/* .image-container:hover img {
-	-moz-transform: scale(1.15);
-	-webkit-transform: scale(1.15);
-	transform: scale(1.15);
-}  */
 /**************************/
 /*     03. Navigation     */
 /**************************/
@@ -134,22 +116,6 @@
   margin-right: 0.125rem;
 }
 
-/*************************/
-/*     18. Copyright     */
-/*************************/
-.copyright {
-  padding-top: 1rem;
-  /* padding-bottom: 0.5rem; */
-  background-color: #113448;
-  text-align: center;
-}
-
-.copyright p,
-.copyright a {
-  color: #dfe5ec;
-  text-decoration: none;
-}
-
 /**********************************/
 /*     19. Back To Top Button     */
 /**********************************/
@@ -169,27 +135,4 @@ a.back-to-top {
 
 a:hover.back-to-top {
   background-color: #13aa87;
-}
-
-/**********************/
-/*     17. Footer     */
-/**********************/
-.footer {
-  /* padding-top: 5rem; */
-  background-color: #113448;
-}
-
-.footer .text-container {
-  margin-bottom: 2.25rem;
-}
-
-.footer h4 {
-  margin-bottom: 0.75rem;
-  color: #fff;
-}
-
-.footer p,
-.footer ul {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
 }

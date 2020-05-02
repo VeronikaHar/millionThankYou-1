@@ -21,7 +21,6 @@
   box-sizing: border-box;
   font-family:  'Open Sans', sans-serif;
   font-weight: 400;
-  font-size: var(--font-size-basic);
 }
 
 a{
@@ -37,25 +36,26 @@ body {
   background-color: #fff;
   color: var(--font-color);
   margin: auto;
+  font-size: var(--font-size-basic);
   line-height: 1.5;
 }
 
 .board {
   display: flex;
   flex-wrap: wrap;
-  margin: 80px 7% 50px;
+  margin: 80px 9% 50px;
   justify-content: center
 }
 
-.btn {
+.btn,
+a.ViewProfileButton {
   border: 0;
   border-radius: var(--radius);
-  background: #14bf98;
+  background-color: #14bf98!important;
   color: white;
   text-decoration: none;
   text-align: center;
   font-family: var(--heading-font);
-  font-size: 18px;
   padding: 9px 15px;
   align-self: flex-end;
   float: right;
@@ -92,6 +92,16 @@ body {
   text-align: left;
 }
 
+.footer {
+  background-color: #113448;
+  text-align: center;
+  color: white;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
 h3 {
 	color: #484a46;
   font: 700 30px "Montserrat", sans-serif;
@@ -99,9 +109,9 @@ h3 {
 }
 
 iframe {
-  width: 290px!important;
-  min-width: 200px!important;
-  height: 500px;
+  max-width: 325px!important;
+  min-width: 235px!important;
+  height: 450px;
 }
 
 label {
@@ -127,8 +137,9 @@ label {
 .navbar-dark .navbar-nav .nav-link {
   color: white;
   padding: 0;
-  padding-right: 20px;
-  transition: all 0.2s ease;
+  padding-right: 30px;
+  font-size: var(--font-size-basic);
+  transition: all 0.3s ease;
   text-decoration: none;
 }
 
@@ -187,7 +198,7 @@ p {
 }
 
 .ex-basic-2 {
-  margin: 90px 7% 50px;
+  margin: 90px auto 50px;
   text-align: justify;
 }
 
@@ -199,6 +210,10 @@ p {
   .board,
   .ex-basic-2 {
     margin: 80px auto 50px;
+  }
+
+  h3 {
+    font-size: 20px;
   }
 
   .modal-header,

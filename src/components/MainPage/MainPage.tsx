@@ -92,7 +92,7 @@ class MainPage extends Component {
 
     render() {
         if (this.state.loading)
-            return (<h3 className='text-center min-vh-100' style={{ marginTop: '50vh', fontWeight: 500, color: '#e71212' }}>Loading please wait...</h3>)
+            return (<h5 className='text-center min-vh-100' style={{ marginTop: '50vh', fontWeight: 500, color: '#e71212' }}>Loading please wait...</h5>)
         return (
             <>
                 {this.state.currentUser.originalImageUrl === '' ?
