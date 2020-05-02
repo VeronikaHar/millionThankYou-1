@@ -19,7 +19,7 @@ class AboutUs extends Component {
                             </div>
                             <br />
                             <div className="row">
-                                <div className="col-md-6">
+                                <div className="col-md-4">
                                     <div className="text-container">
                                         <h3>Be a part of our mission</h3>
                                         <p>Be a part of our mission to collect 1 million thank you pictures. We strongly believe that everyone wants to contribute what they can to bring happiness into this world and this is your chance to make the different in the community and bring a smile to all the frontline workers around the world. Simply take a picture of you or your family holding a sign saying “thank you”.</p>
@@ -31,9 +31,12 @@ class AboutUs extends Component {
                                         <p>You can reach us at <a href="mailto:millionthankyouorg@gmail.com">millionthankyouorg@gmail.com</a></p>
                                     </div>
                                 </div>
-                                <div className="col-md-6">
-                                    <div className="text-container" style={{ maxHeight: '600px', overflow: 'hidden' }}>
+                                <div className="col-md-8">
+                                    <div className="text-container" style={{ maxHeight: '760px', overflow: 'hidden' }}>
                                         <h3>Message from Michelle Obama</h3>
+                                        <p style={{ fontStyle: "italic" }}>"If you’re feeling as grateful for our first responders as I am, now’s the time to let them know. From our medical providers and hospital staff to our grocery, transit, and delivery workers, so many extraordinary people are putting their lives on the line to get us all through this moment.
+                                            <br />
+                                        Let’s take the opportunity to tell them and their families that we see their sacrifices and we’re behind them." <span style={{ fontWeight: 600 }}>- Michelle Obama</span> </p>
                                         <InstagramEmbed
                                             url='https://www.instagram.com/p/B-dHjFkgdL9/?utm_source=ig_web_copy_link'
                                             hideCaption={true}
