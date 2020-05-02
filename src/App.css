@@ -248,7 +248,7 @@ p {
   text-align: justify;
 }
 
-@media all and (max-width: 757px) {
+@media all and (max-width: 767px) {
   body {
     font-size: 16px;
   }
@@ -269,5 +269,14 @@ p {
 
   .modal-body img {
     max-height: 400px;
+  }
+
+  .navbar-nav {
+    flex-direction: column!important;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 5px!important;
   }
 }
