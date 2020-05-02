@@ -308,4 +308,10 @@ p {
   .navbar-nav .nav-link {
     padding: 5px!important;
   }
+
+  .navbar-dark .navbar-toggler:hover,
+  .navbar-dark .navbar-toggler:focus {
+    border-color: #14bf98!important;
+    outline: none;
+  }
 }
