@@ -10,7 +10,7 @@
   --font-size-basic: 18px;
   --font-size-h: 28px;
   --font-color: #4c4c4b;
-  --radius: 0.2rem;
+  --radius: 0.25rem;
   --shadow: 3px 4px 7px 0 #B6B6B6;
 }
 
@@ -23,13 +23,31 @@
   font-weight: 400;
 }
 
-a{
+a {
   color:  var(--font-color);
 }
 
 a:hover {
   text-decoration: none;
   color: var(--heading-font-color);
+}
+
+a.back-to-top {
+  position: fixed;
+  z-index: 999;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  display: none;
+  width: 2.625rem;
+  height: 2.625rem;
+  border-radius: 1.875rem;
+  background: #14bf98 url("up-arrow.png") no-repeat center 47%;
+  background-size: 1.125rem 1.125rem;
+  text-indent: -9999px;
+}
+
+a:hover.back-to-top {
+  background-color: #13aa87;
 }
 
 body {
@@ -47,11 +65,10 @@ body {
   justify-content: center
 }
 
-.btn,
-a.ViewProfileButton {
+.btn {
   border: 0;
   border-radius: var(--radius);
-  background-color: #14bf98!important;
+  background-color: #14bf98;
   color: white;
   text-decoration: none;
   text-align: center;
@@ -99,11 +116,10 @@ a.ViewProfileButton {
 }
 
 .footer p {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 h3 {
-	color: #484a46;
   font: 700 30px "Montserrat", sans-serif;
   text-align: left;
 }
@@ -134,19 +150,49 @@ label {
   min-height: 210px;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: white;
-  padding: 0;
-  padding-right: 30px;
-  font-size: var(--font-size-basic);
-  transition: all 0.3s ease;
-  text-decoration: none;
+.mx-3 {
+  margin: 0!important;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link:focus,
-.navbar-dark .navbar-nav .nav-link:active {
-  color: #14bf98;
+.navbar {
+  background-color: #113448!important;
+  position: fixed!important;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.navbar-brand.logo-image img {
+  width: 200px;
+  margin-bottom: -10px;
+}
+
+.navbar-nav {
+  flex-direction: row!important;
+}
+
+.navbar .social-icons {
+  display: none;
+}
+
+.navbar-nav .nav-link {
+    color: white!important;
+    padding: 0!important;
+    padding-right: 30px!important;
+    font-size: var(--font-size-basic);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active {
+  color: #14bf98!important;
+}
+
+.navbar-dark .navbar-toggler {
+  color: #fff!important;
+  border: 0.5px solid var(--heading-font-color)!important;
 }
 
 p {
@@ -209,7 +255,7 @@ p {
 
   .board,
   .ex-basic-2 {
-    margin: 80px auto 50px;
+    margin: 80px 5px 50px;
   }
 
   h3 {
