@@ -70,6 +70,7 @@ class UserModalBody extends Component<ICompProps> {
                                 this.props.resetValidation();
                             })
                         }} />
+                    <div style={{ fontSize: '12px', textAlign: 'left', color: '#6d6c6c' }}>* will never be shared or used for marketing purposes</div>
                     {this.props.noEmail &&
                         <div className='text-danger text-left'>Please enter a valid email address</div>}
 
