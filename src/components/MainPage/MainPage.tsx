@@ -101,7 +101,7 @@ class MainPage extends Component {
         })
     };
 
-    welcomeToast = () => toast.info("Support your community by uploading a Thank You picture. \n \n For more details go to About page.");
+    welcomeToast = () => toast.info("Welcome! \n \n Support your community by uploading a Thank You picture. \n \n For more details go to About page.");
     successToast = () => toast.success("Success! \n \n Your Thank You message has been uploaded.");
 
     render() {

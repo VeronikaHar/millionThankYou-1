@@ -352,5 +352,6 @@ p {
       width: 100vw!important;
       padding: 12px!important;
       left: -5px!important;
+      margin: 0!important;
     }
   }
