@@ -109,7 +109,7 @@ class MainPage extends Component {
             return (<h5 className='text-center min-vh-100' style={{ marginTop: '50vh', fontWeight: 500, color: '#e71212' }}>Loading please wait...</h5>)
         return (
             <>
-                <ToastContainer autoClose={false} position={toast.POSITION.TOP_CENTER} />
+                <ToastContainer position={toast.POSITION.TOP_CENTER} />
                 {this.state.currentUser.originalImageUrl === '' ?
                     <CommonModal isOpen={this.state.isOpen}
                         modalBody={<UserModalBody
