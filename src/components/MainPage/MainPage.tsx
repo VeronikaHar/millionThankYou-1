@@ -3,6 +3,8 @@ import localImage from '../../assets/1.jpg';
 import CommonModal from '../../common/commonModal';
 import DisplayModal from "./DisplayModal";
 import UserModalBody from "./UserModalBody";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 import * as defaultApiService from '../../common/defaultApiService'
 
 declare var $: any;
@@ -35,6 +37,7 @@ class MainPage extends Component {
             "file": ''
         }
     };
+
     openModal = (user: any) => {
         this.setState({ currentUser: user }, () => {
             this.imageModal.click();
@@ -58,6 +61,7 @@ class MainPage extends Component {
                     })
                 }
                 this.setState({ users: tempUsers });
+                this.welcomeToast();
             })
     }
 
@@ -73,7 +77,14 @@ class MainPage extends Component {
             .then(res => {
                 // @ts-ignore
                 document.getElementById('modalCloseButton').click();
-                this.setState({ currentUser: {} })
+                this.setState({ currentUser: {} });
+                console.log(res);
+                if (res.status === 200) {
+                    this.setState({ isOpen: false });
+                    this.successToast();
+                }
+            }).catch(e => {
+                console.log('Error', e)
             })
     };
 
@@ -90,11 +101,15 @@ class MainPage extends Component {
         })
     };
 
+    welcomeToast = () => toast.info("Support your community by uploading a Thank You picture. \n \n For more details go to About page.");
+    successToast = () => toast.success("Success! \n \n Your Thank You message has been uploaded.");
+
     render() {
         if (this.state.loading)
             return (<h5 className='text-center min-vh-100' style={{ marginTop: '50vh', fontWeight: 500, color: '#e71212' }}>Loading please wait...</h5>)
         return (
             <>
+                <ToastContainer autoClose={false} position={toast.POSITION.TOP_CENTER} />
                 {this.state.currentUser.originalImageUrl === '' ?
                     <CommonModal isOpen={this.state.isOpen}
                         modalBody={<UserModalBody
@@ -112,7 +127,6 @@ class MainPage extends Component {
                             <img className={e.id ? 'plusImage' : 'plus'} src={e.thumbnailImageUrl}
                                 onClick={() => {
                                     this.openModal(e);
-                                    console.log(e)
                                 }} />
                         </div>
                     }
