@@ -82,6 +82,8 @@ class MainPage extends Component {
             this.setState({ noFile: true });
             return;
         }
+        this.loadingToast();
+
         let data = new FormData();
         data.append('file', this.state.newUser.file);
         data.append('name', this.state.newUser.name);
@@ -132,6 +134,8 @@ class MainPage extends Component {
     };
 
     welcomeToast = () => toast.info(<p>Support your community by uploading a "Thank You" picture. Click <a className="link" href="/about">About page</a> for more details.</p>, { position: toast.POSITION.BOTTOM_RIGHT, transition: Slide });
+
+    loadingToast = () => toast.error("Upload in progress.\n \nPlease wait...", { position: toast.POSITION.TOP_CENTER, transition: Zoom, autoClose: false });
 
     successToast = () => toast.success("Success! \n \n Your \"Thank You\" message has been successfully uploaded.", { position: toast.POSITION.TOP_CENTER, transition: Zoom });
 

@@ -235,7 +235,7 @@ p {
 }
 
 .Toastify__toast-container--top-center {
-  top: 30%!important;
+  top: 35%!important;
   margin-left: -220px!important;
 }
 
@@ -243,7 +243,7 @@ p {
   border-radius: 0.25rem!important;
   font-size: 16px;
   opacity: 0.95;
-  padding: 15px!important;
+  padding: 8px 15px!important;
   white-space: pre-line;
 }
 
@@ -251,9 +251,12 @@ p {
   margin-right: 15px!important;
 }
 
-.Toastify__toast-container {
-  padding: 8px!important;
-  width: 450px!important;
+.Toastify__toast-body a {
+  color: #14bf98;
+}
+
+.Toastify__toast-body p {
+  margin: 0;
 }
 
 .Toastify__toast--info {
@@ -262,6 +265,13 @@ p {
 
 .Toastify__toast--success {
   background: #14bf98!important;
+  width: 400px!important;
+}
+
+.Toastify__toast--error {
+  background: #e71212!important;
+  width: 400px!important;
+  text-align: center;
 }
 
 .plus {
@@ -353,5 +363,14 @@ p {
       padding: 12px!important;
       left: -5px!important;
       margin: 0!important;
+    }
+
+    .Toastify__toast--success {
+      width: 95vw!important;
+    }
+
+    .Toastify__toast--error {
+      width: 90vw!important;
+      margin-left: 5px;
     }
   }
