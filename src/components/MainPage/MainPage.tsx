@@ -3,7 +3,7 @@ import localImage from '../../assets/1.jpg';
 import CommonModal from '../../common/commonModal';
 import DisplayModal from "./DisplayModal";
 import UserModalBody from "./UserModalBody";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast, Slide, Zoom } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.min.css';
 import * as defaultApiService from '../../common/defaultApiService'
 
@@ -95,6 +95,8 @@ class MainPage extends Component {
                 document.getElementById('modalCloseButton').click();
                 this.setState({ currentUser: {} });
                 if (res.status === 200) {
+                    //dismiss all toasts
+                    toast.dismiss();
                     this.setState({ isOpen: false });
                     this.successToast();
                     const gridNum = this.totalImageCount - this.currentImageCount;
@@ -129,8 +131,9 @@ class MainPage extends Component {
         })
     };
 
-    welcomeToast = () => toast.info("Welcome! \n \n Support your community by uploading a Thank You picture. \n \n For more details go to About page.");
-    successToast = () => toast.success("Success! \n \n Your Thank You message has been uploaded.");
+    welcomeToast = () => toast.info(<p>Support your community by uploading a "Thank You" picture. Click <a className="link" href="/about">About page</a> for more details.</p>, { position: toast.POSITION.BOTTOM_RIGHT, transition: Slide });
+
+    successToast = () => toast.success("Success! \n \n Your \"Thank You\" message has been successfully uploaded.", { position: toast.POSITION.TOP_CENTER, transition: Zoom });
 
     render() {
         if (this.state.loading)
@@ -138,7 +141,7 @@ class MainPage extends Component {
                 style={{ marginTop: '50vh', fontWeight: 500, color: '#e71212' }}>Loading please wait...</h5>)
         return (
             <>
-                <ToastContainer position={toast.POSITION.TOP_CENTER} />
+                <ToastContainer />
                 {this.state.currentUser.originalImageUrl === '' ?
                     <CommonModal isOpen={this.state.isOpen}
                         modalBody={<UserModalBody
