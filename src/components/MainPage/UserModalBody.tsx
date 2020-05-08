@@ -96,7 +96,7 @@ class UserModalBody extends Component<ICompProps> {
                         }} />
                 </div>
                 {!this.props.readOnly && <div className="custom-file">
-                    <input type="file" className="custom-file-input" id="validatedCustomFile"
+                    <input type="file" className="custom-file-input" id="validatedCustomFile" name="img" accept="image/*"
                         onChange={this.fileChanged} />
                     <label className="custom-file-label" htmlFor="validatedCustomFile">{this.state.fileLabel}</label>
                     {this.props.noFile &&
