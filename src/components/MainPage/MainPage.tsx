@@ -133,7 +133,7 @@ class MainPage extends Component {
         })
     };
 
-    welcomeToast = () => toast.info(<p>Support your community by uploading a "Thank You" picture. Click <a className="link" href="/about">About page</a> for more details.</p>, { position: toast.POSITION.BOTTOM_RIGHT, transition: Slide });
+    welcomeToast = () => toast.info(<p>Express your appreciation of Covid-19 pandemic frontline workers by uploading a "Thank You" picture. Click <a className="link" href="/about">About page</a> for more details.</p>, { position: toast.POSITION.BOTTOM_RIGHT, transition: Slide, autoClose: 10000 });
 
     loadingToast = () => toast.error("Upload in progress.\n \nPlease wait...", { position: toast.POSITION.TOP_CENTER, transition: Zoom, autoClose: false });
 
